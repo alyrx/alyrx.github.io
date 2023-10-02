@@ -14,11 +14,13 @@ body{
     border-bottom: 2px solid rgb(13, 13, 13);
     user-select: none;
     transition: all;
+    transition-timing-function: ease-in;
     transition-duration: 250ms;
 }
 .header:hover {
     border-bottom: 2px solid rgb(235, 52, 113);
     transition: all;
+    transition-timing-function: ease-in;
     transition-duration: 250ms;
 }
 .header * {
@@ -40,14 +42,51 @@ body{
 }
 .header .links a i {
     transition: all;
+    transition-timing-function: ease-out;
     transition-duration: 250ms;
 }
 .header .links a i:hover {
     color: rgb(235, 52, 113);
     transition: all;
+    transition-timing-function: ease-out;
     transition-duration: 250ms;
 }
 .header p{
     font-size: 22px;
     margin: 0;
+}
+
+.container-lg {
+    user-select: none;
+    display: flex;
+    justify-content: space-around;
+}
+.container-lg i.bi-exclamation-triangle-fill {
+    font-size: 110px;
+    color: rgb(235, 52, 113);
+    transition: all;
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
+}
+.container-lg i.bi-exclamation-triangle-fill:hover {
+    font-size: 120px;
+    color: rgb(248, 72, 189);
+    transition: all;
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
+}
+
+@media (max-width: 767px) {
+    .header .header-content {
+        padding: 15px 30px
+    }
+
+    .container-lg i.bi-exclamation-triangle-fill {
+        font-size: 75px;
+    }
+    .container-lg i.bi-exclamation-triangle-fill:hover {
+        font-size: 75px;
+        color: rgb(235, 52, 113);
+        transition: none;
+    }
 }
