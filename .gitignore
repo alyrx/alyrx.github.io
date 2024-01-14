@@ -1,5 +1,8 @@
 # Images folder
 /images/
 
+# Dakku - Song information .json folder
+/dakku/v2/downloads/songs
+
 # In development files
 dev.*
