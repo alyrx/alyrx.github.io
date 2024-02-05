@@ -9,7 +9,6 @@ function calculateContentHeight() {
 
     var contentHeight = ((windowHeight - (headerHeight + footerHeight)) / windowHeight) * 100;
     
-    // alert(document.getElementById('content').classList[1]);
     if (window.onload) {
         document.getElementById('content').classList.add('flex');
         document.getElementById('content').classList.add(`h-[${contentHeight}vh]`);
