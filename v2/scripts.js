@@ -21,9 +21,20 @@ function calculateContentHeight() {
 }
   
 window.onload = function () {
-    calculateContentHeight();
+    if (window.innerWidth <= 767) {
+        document.getElementById('content').classList.add('h-dvh');
+    } else {
+        calculateContentHeight();
+    }
 }
 
 window.onresize = function () {
-    calculateContentHeight();
+    if (window.innerWidth <= 767) {
+        var pastContentHeight = document.getElementById('content').classList[1];
+        document.getElementById('content').classList.remove(pastContentHeight);
+        
+        document.getElementById('content').classList.add('h-dvh');
+    } else {
+        calculateContentHeight();
+    }
 }
